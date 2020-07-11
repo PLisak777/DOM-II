@@ -22,10 +22,14 @@ navList.forEach(item => {
     })
 })
 
+// Change the size of header text on click
+
 const logoHead = document.querySelector('.logo-heading')
 logoHead.addEventListener('click', () => {
     logoHead.style.transform = 'scale(1.5)'
 })
+
+// You don't need to click more than once on text
 
 const headLines = document.querySelectorAll('h2')
 headLines.forEach(item => {
@@ -34,10 +38,12 @@ headLines.forEach(item => {
     })
 })
 
+// I want an alert to pop up when user tries to drag the img
+
 const imgContent = document.querySelectorAll('.img-content img')
 
 imgContent.forEach(item => {
-    item.addEventListener('drag', (event) => {
-        imgContent.alert("I do not consent to this!");
+    item.addEventListener('drag', () => {
+        alert("I do not consent to this!") // Turns out alert() method stops all code execution. Don't do alert
     })
 })
